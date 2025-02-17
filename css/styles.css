@@ -1,0 +1,106 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Animaciones para la barra de progreso */
+.progress-bar {
+    transition: width 0.6s ease;
+}
+
+/* Estilos para las cards de candidatos */
+.card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Estilos para el contador */
+#countdown {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#timer {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Estilos para las secciones */
+section {
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+/* Estilos para estadísticas */
+.card .display-4 {
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+/* Animación para botones */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para la tabla de resultados */
+.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 160px;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animaciones para los resultados */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
